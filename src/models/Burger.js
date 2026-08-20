@@ -1,3 +1,5 @@
+import { Food } from './Food.js';
+
 export class Burger extends Food {
     constructor(builder) {
         super(
@@ -9,7 +11,7 @@ export class Burger extends Food {
             builder.ingredients, 
             'burger'
         );
-        
+
         this.customNotes = builder.customNotes;
     }
 }
