@@ -62,6 +62,15 @@ export class FoodBuilder {
         return this;
     }
 
+    /**
+     * @param {string} ingredients
+     */
+    setIngredients(ingredients) {
+        this._validateString(ingredients, "los ingredientes no pueden estar vacíos");
+        this.ingredients = ingredients;
+        return this;
+    }
+
     _validateString(value, errorMessage) {
         if (!value || value.trim() === "") {
             throw new Error(errorMessage);

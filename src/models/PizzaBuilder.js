@@ -1,7 +1,7 @@
-import { Burger } from './Burger.js';
+import { Pizza } from './Pizza.js';
 import { FoodBuilder } from './FoodBuilder.js';
 
-export class BurgerBuilder extends FoodBuilder {
+export class PizzaBuilder extends FoodBuilder {
     constructor() {
         super();
         this.customNotes = "";
@@ -23,11 +23,11 @@ export class BurgerBuilder extends FoodBuilder {
     }
 
     /**
-     * @returns {Burger}
+     * @returns {Pizza}
      */
     build() {
-        const burger = new Burger(this);
+        const pizza = new Pizza(this);
         this.reset();
-        return burger;
+        return pizza;
     }
 }

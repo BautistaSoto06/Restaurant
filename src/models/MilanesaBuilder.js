@@ -1,7 +1,7 @@
-import { Burger } from './Burger.js';
+import { Milanesa } from './Milanesa.js';
 import { FoodBuilder } from './FoodBuilder.js';
 
-export class BurgerBuilder extends FoodBuilder {
+export class MilanesaBuilder extends FoodBuilder {
     constructor() {
         super();
         this.customNotes = "";
@@ -23,11 +23,19 @@ export class BurgerBuilder extends FoodBuilder {
     }
 
     /**
-     * @returns {Burger}
+     * @param {string} conPapas
+     */
+    setConPapas(conPapas) {
+        this.conPapas = conPapas;
+        return this;
+    }
+
+    /**
+     * @returns {Milanesa}
      */
     build() {
-        const burger = new Burger(this);
+        const milanesa = new Milanesa(this);
         this.reset();
-        return burger;
+        return milanesa;
     }
 }
