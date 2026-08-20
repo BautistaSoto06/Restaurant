@@ -49,8 +49,8 @@ export class ShoppingCartBuilder {
         }
         this.items = items.map(normalizeItem);
         return this;
-    }
-
+    }  
+    
     /**
      * @param {Object} product
      * @param {number} quantity
