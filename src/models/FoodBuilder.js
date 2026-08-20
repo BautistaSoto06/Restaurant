@@ -11,8 +11,7 @@ export class FoodBuilder {
             stock: 0,
             name: "",
             image_url: "",
-            ingredients: "",
-            type: ""
+            ingredients: ""
         };
         
         return this;
@@ -43,24 +42,6 @@ export class FoodBuilder {
     }
 
     /**
-     * @param {string} Type
-     */
-    setType(Type) {
-        this._validateString(Type, "la categoría no puede estar vacía");
-        this.Type = Type;
-        return this;
-    }
-    /**
-     * @param {string} ingeredients
-     */
-    setingeredients(ingeredients) {
-        this.ingeredients = ingeredients;
-        return this;
-    }
-    
-    
-
-    /**
      * @param {number} stock
      */
 
@@ -87,6 +68,10 @@ export class FoodBuilder {
         }
     }
     
+    setType(type) {
+        this.type = type;
+        return this;
+    }
     /**
      * @returns {Food}
      */

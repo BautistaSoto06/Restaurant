@@ -5,8 +5,7 @@ export class Food {
         this.stock = stock;
         this.name = name;
         this.image_url = image_url;
-        this.ingeredients = ingeredients;
-        this.type = type;
+        this.ingeredients = ingeredients
     }
 
     getBaseData() {
