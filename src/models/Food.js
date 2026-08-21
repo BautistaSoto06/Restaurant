@@ -1,12 +1,11 @@
 export class Food {
-    constructor(id, price, stock, name, image_url, ingeredients, type) {
+    constructor(id, price, stock, name, image_url, ingredients, type) {
         this.id = id;
         this.price = price;
         this.stock = stock;
         this.name = name;
         this.image_url = image_url;
-        this.ingeredients = ingeredients;
-        this.ingredients = ingeredients;
+        this.ingredients = ingredients;
         this.type = type;
     }
 
@@ -17,7 +16,7 @@ export class Food {
             price: this.price,
             stock: this.stock,
             image_url: this.image_url,
-            ingeredients: this.ingeredients,
+            ingredients: this.ingredients,
             type: this.type
         };
     }

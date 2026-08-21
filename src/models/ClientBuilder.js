@@ -94,8 +94,13 @@ export class ClientBuilder {
     if (!email || email.trim() === "") {
         throw new Error("el correo electrónico no puede estar vacio");
     }
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
+    const emailParts = email.split("@");
+    const domainParts = emailParts.length === 2 ? emailParts[1].split(".") : [];
+    const isValidEmail = emailParts.length === 2 &&
+        emailParts[0].length > 0 &&
+        domainParts.length >= 2 &&
+        domainParts.every(part => part.length > 0 && !/[\s@]/.test(part));
+    if (!isValidEmail) {
         throw new Error("el correo electrónico no es válido");
     }
     this.email = email;
@@ -118,7 +123,6 @@ export class ClientBuilder {
      */
     build() {
         return new Client(this);
-        r
     }
 }
 

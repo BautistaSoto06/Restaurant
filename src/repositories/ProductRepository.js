@@ -20,7 +20,7 @@ export class ProductRepository {
             product.price,
             product.stock,
             product.image_url,
-            product.ingeredients || product.ingredients || '',
+            product.ingredients || '',
             product.type
         ];
 
@@ -32,7 +32,7 @@ export class ProductRepository {
             product.stock,
             product.name,
             product.image_url,
-            product.ingeredients || product.ingredients || '',
+            product.ingredients || '',
             product.type
         );
     }
@@ -98,7 +98,7 @@ export class ProductRepository {
             productData.price,
             productData.stock,
             productData.image_url,
-            productData.ingeredients || productData.ingredients || '',
+            productData.ingredients || '',
             productData.type,
             id
         ];
